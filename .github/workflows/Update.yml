@@ -58,6 +58,7 @@ jobs:
         rm -rf ./op-fileBrowser/*
         rm -rf ./op-aliyun/*
         rm -rf ./op-socat/socat
+        rm -rf ./op-mosdns/*
         rm -rf ./patch/wall
         rm -rf ./patch/luci-wall
         rm -rf ./patch/redsocks2
@@ -67,7 +68,7 @@ jobs:
         git clone https://github.com/tty228/luci-app-serverchan ./luci-app-serverchan
         git clone https://github.com/ntlf9t/luci-app-easymesh ./luci-app-easymesh
         git clone https://github.com/yaof2/luci-app-ikoolproxy ./luci-app-ikoolproxy
-        rm -rf ./luci-app-ikoolproxy/.github        
+        rm -rf ./luci-app-ikoolproxy/.github       
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
         
         svn export https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker ./lisaac/luci-lib-docker
@@ -114,7 +115,8 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass ./patch/luci-wall/luci-app-bypass
         svn checkout https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash ./patch/luci-wall/luci-app-openclash
         
-        svn export https://github.com/coolsnowwolf/packages/trunk/net/socat op-socat/socat
+        svn export https://github.com/coolsnowwolf/packages/trunk/net/socat ./op-socat/socat
+        git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns/
         
 
     - name: Apply
