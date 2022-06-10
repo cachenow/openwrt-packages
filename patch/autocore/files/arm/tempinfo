@@ -15,8 +15,8 @@ cpu_temp="$(awk '{printf("%.1f°C", $0 / 1000)}' /sys/class/thermal/thermal_zone
 
 if grep -q "ipq40xx" "/etc/openwrt_release"; then
 	echo -n "WiFi:${mt76_temp} ${wifi_temp}"
-elif grep -q "bcm53xx" "/etc/openwrt_release"; then	
-	echo -n "CPU: ${cpu_temp}"	
+elif grep -q "ipq807x|ipq806x" "/etc/openwrt_release"; then
+	echo -n "CPU: ${cpu_temp}, WiFi: ${wifi_temp}"	
 else	
-	echo -n "CPU: ${cpu_temp}, WiFi: ${wifi_temp}"
+	echo -n "CPU: ${cpu_temp}"
 fi

@@ -2,6 +2,7 @@
 # Copyright (C) 2010-2011 OpenWrt.org
 #  2020  by lean
 #  2021-2022 by sirpdboy  (sirpdboy@qq.com)
+#  2022 by xiangfeidexiaohuo  (jsjson@163.com)
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
@@ -10,7 +11,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=autocore
 PKG_VERSION:=2
-PKG_RELEASE:=8
+PKG_RELEASE:=9
 
 include $(INCLUDE_DIR)/package.mk
 
